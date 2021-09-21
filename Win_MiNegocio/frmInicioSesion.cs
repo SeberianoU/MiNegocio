@@ -17,6 +17,7 @@ namespace Win_MiNegocio
             InitializeComponent();
         }
 
+        #region Configuración
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -55,5 +56,8 @@ namespace Win_MiNegocio
                  textBoxContraseña.Text = "CONTRASEÑA";
             }
         }
+        #endregion
+
+
     }
 }
