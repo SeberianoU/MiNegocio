@@ -73,6 +73,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\BL_MiNegocio.BL_Usuarios.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,6 +91,12 @@
     <Content Include="Icon_78.ico" />
     <None Include="Resources\user-57.png" />
     <None Include="Resources\user-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL_MiNegocio\BL_MiNegocio.csproj">
+      <Project>{b89be6b7-b286-4028-9d3d-b39f4522e117}</Project>
+      <Name>BL_MiNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -56,8 +56,13 @@ namespace Win_MiNegocio
                  textBoxContraseña.Text = "CONTRASEÑA";
             }
         }
+
         #endregion
 
 
+        private void frmInicioSesion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

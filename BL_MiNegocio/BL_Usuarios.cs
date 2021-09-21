@@ -16,7 +16,7 @@ namespace BL_MiNegocio
         public string Apellido { get; set; }
         public string Contraseña { get; set; }
         public string Correo { get; set; }
-        public string Foto { get; set; }
+        public Byte[] Foto { get; set; }
         public string Departamento { get; set; }
         public string Permisos { get; set; }
         public bool Estado { get; set; }
