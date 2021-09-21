@@ -16,5 +16,44 @@ namespace Win_MiNegocio
         {
             InitializeComponent();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void textBoxUsuario_Enter(object sender, EventArgs e)
+        {
+            if (textBoxUsuario.Text == "USUARIO")
+            {
+                textBoxUsuario.Text = "";
+            }
+        }
+
+        private void textBoxUsuario_Leave(object sender, EventArgs e)
+        {
+            if (textBoxUsuario.Text == "")
+            {
+                textBoxUsuario.Text = "USUARIO";
+            }
+        }
+
+        private void textBoxContraseña_Enter(object sender, EventArgs e)
+        {
+            if (textBoxContraseña.Text == "CONTRASEÑA")
+            {
+                textBoxContraseña.UseSystemPasswordChar = true;
+                textBoxContraseña.Text = "";
+            }
+        }
+
+        private void textBoxContraseña_Leave(object sender, EventArgs e)
+        {
+            if (textBoxContraseña.Text == "")
+            { 
+                textBoxContraseña.UseSystemPasswordChar = false;
+                 textBoxContraseña.Text = "CONTRASEÑA";
+            }
+        }
     }
 }
