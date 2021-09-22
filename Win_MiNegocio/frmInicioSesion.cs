@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BL_MiNegocio;
 
 namespace Win_MiNegocio
 {
@@ -59,10 +60,62 @@ namespace Win_MiNegocio
 
         #endregion
 
+        private BL_Usuarios _usuarios;
 
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {
+            _usuarios = new BL_Usuarios();
+            listaUsuariosBindingSource.DataSource = _usuarios.ObtenerUsuarios();
+        }
 
+        private void textBoxUsuario_Validated(object sender, EventArgs e)
+        {
+            listaUsuariosBindingSource.DataSource = _usuarios.ObtenerUsuarios(textBoxUsuario.Text);
+            var usuario = (Usuario)listaUsuariosBindingSource.Current;
+
+            if (usuario != null)
+            {
+                if (textBoxUsuario.Text == usuario.NombreUsuario && usuario.Estado == true)
+                {
+                    //MessageBox.Show("Bienbenido: " + usuario.Nombre + " " + usuario.Apellido);
+                    #region Imagen
+                    if (usuario.Foto != null)
+                    {                        
+                        pictureBoxFoto.Image = Program.arrayByteToImagen(usuario.Foto);                        
+                    }
+                    else
+                    {
+                        pictureBoxFoto.Image = null;
+                    }
+                    #endregion
+                }
+                else
+                {
+                    MessageBox.Show("NO encuentra el ususario o No tiene acceso.");
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //
+            listaUsuariosBindingSource.DataSource = _usuarios.ObtenerUsuarios(textBoxUsuario.Text);
+            var usuario = (Usuario)listaUsuariosBindingSource.Current;
+
+            if (usuario != null)
+            {
+                if (textBoxUsuario.Text == usuario.NombreUsuario && usuario.Estado == true && usuario.Contraseña == textBoxContraseña.Text)
+                {
+                    MessageBox.Show("Acceso autorizado");
+                    Application.Exit();
+                }
+                else
+                {
+                    MessageBox.Show("Valores ingresadosn no concuerdan");
+                }
+                //
+            }
         }
     }
+
 }

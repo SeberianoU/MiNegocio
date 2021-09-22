@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(641, 317);
+            this.panel1.Size = new System.Drawing.Size(600, 300);
             this.panel1.TabIndex = 0;
             // 
             // button1
@@ -69,6 +69,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "INICIAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxContraseña
             // 
@@ -97,6 +98,7 @@
             this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxUsuario.Enter += new System.EventHandler(this.textBoxUsuario_Enter);
             this.textBoxUsuario.Leave += new System.EventHandler(this.textBoxUsuario_Leave);
+            this.textBoxUsuario.Validated += new System.EventHandler(this.textBoxUsuario_Validated);
             // 
             // btnCerrar
             // 
@@ -138,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 317);
+            this.ClientSize = new System.Drawing.Size(600, 300);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

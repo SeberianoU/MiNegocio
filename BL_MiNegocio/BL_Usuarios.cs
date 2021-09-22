@@ -39,6 +39,16 @@ namespace BL_MiNegocio
             listaUsuarios = _contexto.Usuarios.Local.ToBindingList();
             return listaUsuarios;
         }
+
+
+        public BindingList<Usuario> ObtenerUsuarios(string nombreUsuario)
+        {
+            var consulta = listaUsuarios.Where(p => p.NombreUsuario == nombreUsuario).ToList();
+            var resultado = new BindingList<Usuario>(consulta);
+
+            return resultado;
+        }
+
         public void AgregarUsuario()
         {
             var nuevoUsuario = new Usuario();

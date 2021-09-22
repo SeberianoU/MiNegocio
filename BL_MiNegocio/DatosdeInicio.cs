@@ -17,6 +17,17 @@ namespace BL_MiNegocio
 
             contexto.Usuarios.Add(usuario1);
 
+            var usuario2 = new Usuario();
+
+            usuario2.Id = 2;
+            usuario2.NombreUsuario = "Sebe";
+            usuario2.Contraseña = "123";
+            usuario2.Nombre = "Caja";
+            usuario2.Apellido = "Caja #2";
+            usuario2.Estado = true;
+
+            contexto.Usuarios.Add(usuario2);
+
             base.Seed(contexto);
         }
     }
