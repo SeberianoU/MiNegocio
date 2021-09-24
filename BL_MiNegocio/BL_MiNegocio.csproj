@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="BL_Usuarios.cs" />
     <Compile Include="CancelarCambios.cs" />
+    <Compile Include="ConfiguracionActual.cs" />
     <Compile Include="Contexto.cs" />
     <Compile Include="DatosdeInicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

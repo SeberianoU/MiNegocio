@@ -114,8 +114,19 @@ namespace Win_MiNegocio
             {
                 if (textBoxUsuario.Text == usuario.NombreUsuario && usuario.Estado == true && usuario.Contraseña == textBoxContraseña.Text)
                 {
-                    MessageBox.Show("Acceso autorizado");
-                    Application.Exit();
+                    //Cargar datos a clase
+                    ConfiguracionActual.NombreUsuario = textBoxUsuario.Text;
+                    ConfiguracionActual.Nombre = usuario.Nombre;
+                    ConfiguracionActual.Apellido = usuario.Apellido;
+                    ConfiguracionActual.Empresa = "MiNegocio " + "Tecnologìas Informàticas";
+                    ConfiguracionActual.Foto = usuario.Foto;
+
+
+                    frmPrincipal formPrincipal;
+                    formPrincipal = new frmPrincipal();                
+                    formPrincipal.Show();
+                    this.Visible = false;
+
                 }
                 else
                 {

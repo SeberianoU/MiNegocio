@@ -122,6 +122,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon_78.ico" />
+    <None Include="Resources\maxi1.png" />
+    <None Include="Resources\res1.png" />
+    <None Include="Resources\res.png" />
+    <None Include="Resources\minimazar.png" />
+    <None Include="Resources\maxi.png" />
+    <None Include="Resources\Icon_162.ico" />
+    <None Include="Resources\Icon_215.ico" />
     <None Include="Resources\cerrar.png" />
     <None Include="Resources\controldeacceso.jpg" />
     <None Include="Resources\Error.png" />
