@@ -19,6 +19,7 @@ namespace Win_MiNegocio
         }
 
         #region Configuración
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -60,6 +61,7 @@ namespace Win_MiNegocio
 
         #endregion
 
+
         private BL_Usuarios _usuarios;
 
         private void frmInicioSesion_Load(object sender, EventArgs e)
@@ -83,16 +85,22 @@ namespace Win_MiNegocio
                     {                        
                         pictureBoxFoto.Image = Program.arrayByteToImagen(usuario.Foto);                        
                     }
-                    else
-                    {
-                        pictureBoxFoto.Image = null;
-                    }
+                    //else
+                    //{
+                    //    pictureBoxFoto.Image = null;
+                    //}
                     #endregion
                 }
                 else
                 {
                     MessageBox.Show("NO encuentra el ususario o No tiene acceso.");
+                    pictureBoxFoto.Image = Properties.Resources.Error;
                 }
+            }
+            else
+            {
+                MessageBox.Show("NO encuentra el ususario o No tiene acceso.");
+                pictureBoxFoto.Image = Properties.Resources.Error;
             }
         }
 

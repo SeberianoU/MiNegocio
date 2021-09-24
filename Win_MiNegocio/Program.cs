@@ -18,7 +18,7 @@ namespace Win_MiNegocio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInicioSesion());
+            Application.Run(new frmPrincipal());
         }
 
         public static byte[] imagenToByteArray(Image imageIn)
